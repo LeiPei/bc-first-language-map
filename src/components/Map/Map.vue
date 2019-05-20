@@ -13,7 +13,7 @@ export default {
 
     let mymap = L.map('mapid', { //eslint-disable-line
       zoomControl: false
-    }).setView([51.505, -0.09], 13)
+    }).setView([49.246292, -123.116226], 13)
     // add zoom control with your options
     L.control.zoom({ //eslint-disable-line
       position: 'topright'
