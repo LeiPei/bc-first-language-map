@@ -1,20 +1,31 @@
 <template>
-  <div id="app">
+  <div id="main-container">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <NavBar></NavBar>
     </div>
     <router-view/>
+    <div id="copyright" class="text-center">
+      <p>Copyright &copy; {{fullYear}} - All Rights Reserved - <a href="#">Lei Matt Amir</a></p>
+    </div>
   </div>
 </template>
 
 <script>
+import NavBar from './components/Header/NavBar'
 export default {
+  data () {
+    return {
+      fullYear: (new Date()).getFullYear()
+    }
+  },
+  components: {
+    NavBar
+  }
 }
 </script>
 
 <style lang="less">
-#app {
+#main-container {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,13 +33,23 @@ export default {
   color: #2c3e50;
 }
 #nav {
-  padding: 30px;
   a {
     font-weight: bold;
     color: #2c3e50;
     &.router-link-exact-active {
       color: #42b983;
     }
+  }
+}
+#copyright {
+  position: absolute;
+  bottom: 0px;
+  background-color: #42b983;
+  height: 30px;
+  width: 100%;
+  p {
+    padding-top: 3px;
+    margin: 0px;
   }
 }
 </style>
