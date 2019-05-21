@@ -4,19 +4,8 @@
 
 <script>
 const POINTS = [
-  { lat: 48.441883, lng: -124.145295 },
-  { lat: 48.309815, lng: -123.565201 },
-  { lat: 48.313350, lng: -123.676739 },
-  { lat: 48.454504, lng: -122.928034 },
-  { lat: 49.246292, lng: -123.116226 },
-  { lat: 49.056801, lng: -122.285042 },
-  { lat: 48.604994, lng: -122.661563 },
-  { lat: 48.640044, lng: -122.607742 },
-  { lat: 48.859472, lng: -121.679234 },
-  { lat: 49.003429, lng: -122.444464 },
-  { lat: 49.036700, lng: -122.790217 },
-  { lat: 49.003499, lng: -123.058013 },
-  { lat: 48.856091, lng: -123.555531 }
+  { lat: 48.346474, lng: -123.599572, name: 'Scia\'new (Beecher Bay)' },
+  { lat: 48.387189, lng: -123.711758, name: 'T\'Sou-ke Nation' },
 ]
 export default {
   mounted () {
@@ -28,12 +17,12 @@ export default {
 
     let mymap = L.map('mapid', { //eslint-disable-line
       zoomControl: false
-    }).setView([49.146292, -123.116226], 10) // 13
+    }).setView([48.741820, -123.032211], 9) // 13
 
     // eslint-disable-next-line
     let myIcon = L.icon({
-      iconUrl: '../../assets/map-pin-silhouette.png',
-      iconSize: [38, 95]
+      iconUrl: 'map-pin-silhouette.png',
+      iconSize: [30, 30]
     })
 
     // add zoom control with your options
@@ -50,15 +39,28 @@ export default {
 
     // process the points
     POINTS.forEach(p => {
-      L.marker([p.lat, p.lng]).addTo(mymap) //eslint-disable-line
+      L.marker([p.lat, p.lng], {icon: myIcon}).addTo(mymap).bindPopup(p.name) //eslint-disable-line
     })
 
     // add polygon
     // eslint-disable-next-line
     L.polygon([
-      [49.36672, -123.16652],
-      [49.074329, -122.559319],
-      [49.09, -123.133568]
+      [48.441883, -124.145295],
+      [48.313350, -123.676739],
+      [48.309815, -123.565201],
+      [48.340761, -123.003724],
+      [48.454504, -122.928034],
+      [48.537149, -122.810257],
+      [48.604994, -122.661563],
+      [48.640044, -122.607742],
+      [48.859472, -121.679234],
+      [48.882065, -121.907392],
+      [49.003429, -122.444464],
+      [49.036700, -122.790217],
+      [49.003499, -123.058013],
+      [49.003499, -123.058013],
+      [48.989754, -123.298196],
+      [48.856091, -123.555531]
     ], { color: '#521170' }).addTo(mymap)
   }
 }
