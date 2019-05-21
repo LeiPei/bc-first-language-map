@@ -5,7 +5,7 @@
 <script>
 const POINTS = [
   { lat: 48.346474, lng: -123.599572, name: 'Scia\'new (Beecher Bay)' },
-  { lat: 48.387189, lng: -123.711758, name: 'T\'Sou-ke Nation' },
+  { lat: 48.387189, lng: -123.711758, name: 'T\'Sou-ke Nation' }
 ]
 export default {
   mounted () {
