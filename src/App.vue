@@ -5,7 +5,7 @@
     </div>
     <router-view/>
     <div id="copyright" class="text-center">
-      <p>Copyright &copy; {{fullYear}} - All Rights Reserved - <a href="#">Lei Matt Amir</a></p>
+      <p>Copyright &copy; {{fullYear}} - All Rights Reserved - <a href="#">PRS</a></p>
     </div>
   </div>
 </template>
