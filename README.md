@@ -1,4 +1,6 @@
-# first-language-map
+# British Columbia first-language-map
+This is a demo project for the proposal of the British Columbia first language map.
+Home page has been developed without functionalities.
 
 ## Project setup
 ```
