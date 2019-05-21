@@ -21,7 +21,7 @@ export default {
 
     // eslint-disable-next-line
     let myIcon = L.icon({
-      iconUrl: 'map-pin-silhouette.png',
+      iconUrl: '../../assets/map-pin-silhouette.png',
       iconSize: [30, 30]
     })
 
