@@ -9,7 +9,14 @@ const POINTS = [
   { lat: 48.313350, lng: -123.676739 },
   { lat: 48.454504, lng: -122.928034 },
   { lat: 49.246292, lng: -123.116226 },
-  { lat: 49.056801, lng: -122.285042 }
+  { lat: 49.056801, lng: -122.285042 },
+  { lat: 48.604994, lng: -122.661563 },
+  { lat: 48.640044, lng: -122.607742 },
+  { lat: 48.859472, lng: -121.679234 },
+  { lat: 49.003429, lng: -122.444464 },
+  { lat: 49.036700, lng: -122.790217 },
+  { lat: 49.003499, lng: -123.058013 },
+  { lat: 48.856091, lng: -123.555531 }
 ]
 export default {
   mounted () {
@@ -21,7 +28,7 @@ export default {
 
     let mymap = L.map('mapid', { //eslint-disable-line
       zoomControl: false
-    }).setView([49.246292, -123.116226], 8) // 13
+    }).setView([49.146292, -123.116226], 10) // 13
 
     // eslint-disable-next-line
     let myIcon = L.icon({
