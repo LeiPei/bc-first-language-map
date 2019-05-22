@@ -12,6 +12,7 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 // css
 import 'leaflet/dist/leaflet.css'
+import 'animate.css/animate.min.css'
 import 'leaflet/dist/leaflet.js'
 // index.js or main.js
 import 'vuetify/dist/vuetify.min.css'
